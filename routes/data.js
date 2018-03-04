@@ -7,6 +7,8 @@ router.post('/', function(req, res) {
   for (var i = 0; i < data_array.length; i++) {
     console.log(data_array[i]);
   }
+
+  // make db query to update data vis
   res.send("hi");
 });
 
