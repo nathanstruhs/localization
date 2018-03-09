@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <div class="container">
+      <h2>History</h2>
+      <hr class="hr-history">
+      <ul class="ul-history">
+        <% for (var i = 0; i < data_array.length; i++) { %>
+            <li><%= data_array[i].timestamp %> - <%= data_array[i].status %></li>
+            <hr>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>

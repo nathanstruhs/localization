@@ -5,7 +5,15 @@
   </head>
   <body>
     <% include partials/header.ejs %>
-
-    <% include partials/status.ejs %>
+    <div class="container">
+        <div class="col">
+            <h2>Welcome to Senior Signal</h2>
+            <p>Keeping tabs on the elderly since 2018.</p>
+            <a href="/history" class="btn">
+                View History
+            </a>
+        </div>
+        <% include partials/status.ejs %>
+    </div>
   </body>
 </html>
