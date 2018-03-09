@@ -9,7 +9,7 @@ router.post('/', function(req, res) {
   }
 
   // make db query to update data vis
-  res.send("hi");
+  res.send(data_array);
 });
 
 module.exports = router;
