@@ -1,0 +1,13 @@
+<div class="status-container">
+    <h2>Status</h2>
+    <hr>
+    <p>Location: <%= location %></p>
+    <% if (distance != 0) { %>
+        <p>Distance: <%= distance %></p>
+    <% } %>
+    <ul>
+        <% for (var i = 0; i < data_array.length; i++) { %>
+            <li><%= data_array[i].status%></li>
+        <% } %>
+    </ul>
+</div>
