@@ -4,8 +4,8 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Senior Signal',
-                        location: 'At home',
-                        distance: '0' });
+                        status: 'home',
+                        rssi: 89 });
 });
 
 router.get('/history', function(req, res, next) {

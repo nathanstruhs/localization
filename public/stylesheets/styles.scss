@@ -1,0 +1,107 @@
+$background-color: #221F1B;
+$primary-color: #2AE8DD;
+$font-size-sm: 16px;
+$font-size-md: 24px;
+$font-size-lg: 48px;
+
+body {
+  margin: 0;
+  background-color: $background-color;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: block;
+  padding: 10px;
+  background-color: $primary-color;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    background-color: transparent;
+    color: $primary-color;
+    outline: 2px solid $primary-color;
+  }
+}
+
+.warning {
+  color: red;
+}
+
+.heart {
+  color: $primary-color;
+}
+
+header {
+  grid-area: header;
+  height: 100px;
+  .logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.status {
+  grid-area: status;
+  height: 480px;
+  .board {
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    display: block;
+    position: relative;
+    margin: 40px auto;
+    padding-top: 1px;
+    box-shadow: 20px 20px 20px black;
+    h2 {
+      background-color: black;
+      color: white;
+      font-size: $font-size-lg;
+      width: 250px;
+      height: 75px;
+      line-height: 117px;
+      text-align: right;
+      padding-right: 10px;
+    }
+    a {
+      display: block;
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+      font-size: $font-size-md;
+    }
+    p {
+      text-align: center;
+      padding-top: 40px;
+      font-size: $font-size-md;
+    }
+  }
+}
+
+footer {
+  grid-area: footer;
+  height: 100px;
+  p {
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: $font-size-sm;
+    .separator {
+      color: $primary-color;
+      position: relative;
+      bottom: 1px;
+      margin: 0 15px;
+    }
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header"
+    "status"
+    "footer";
+}
