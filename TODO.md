@@ -1,12 +1,5 @@
 ## Questions
 
-- Is our pir motion sensor working?
-- Solder radios for RSS
-- How to send/connect radio to Pi (Cant use XCTU on Pi)
-- Actuator? Can we just do one LED?
-
-## 3/8/2018
-
 Notes from Marc - RSSI
 I toyed with an XBee shield with a jumper wire soldered to XBee's RSSI pin.  For some reason Arduino’s pulseIn function doesn’t want to work with the RSSI pin.  It just outputs 0s for the PWM.  I think it’s because Arduino’s PWM sample rate is too slow to record XBee’s output.
 
@@ -18,18 +11,32 @@ Or - you could just use XBee’s API mode and get the RSSI value from each recei
 
 Or - command mode
 
----
-
 Enter command mode: `+++`
 (may need to delay for a bit after +++ command)
 Get decibal hex value of rssi: `ATDB`
 
 ## 3/9/2018
 
-1. Create state diagram
-    - reed switch
-    - proximity
-    - led
-    - rssi
-    - r.pi
-    - website
+1. Doorduino
+    - improve -> distinguish between entering and leaving
+    - Configure proximity sensor with longer wires, new bread board, and box
+
+2. Wearableduino
+    - figure out RSSI, create function to convert to distance
+    - Start and stop RSSI
+
+3. PI
+    - delay after stop command
+
+4. Website
+    - Status partial on homescreen with rssi
+    - History
+
+5. General
+    - Review data integrity
+
+6. Presentation
+    - When finished, review state diagram, redraw in marker
+    - Delegate who says what and when
+    - Create demo video?
+    - Powerpoint

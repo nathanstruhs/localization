@@ -1,4 +1,4 @@
-<div class="status-container">
+<div class="status">
     <h2>Status</h2>
     <hr>
     <p>Location: <%= location %></p>
@@ -8,6 +8,9 @@
     <ul>
         <% for (var i = 0; i < data_array.length; i++) { %>
             <li><%= data_array[i].status%></li>
+        <% } %>
+        <% for (var i = 0; i < 10; i++) { %>
+            <li><%= i %></li>
         <% } %>
     </ul>
 </div>

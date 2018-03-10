@@ -11,15 +11,11 @@ router.post('/', function(req, res) {
                  + date.getHours() + ":"
                  + date.getMinutes();
 
-  //entry['status'] = req.body;
   entry['timestamp'] = datetime;
   data_array.push(entry);
   for (var i = 0; i < data_array.length; i++) {
     console.log(entry);
   }
-
-  // make db query to update data vis
-  res.send(data_array);
 });
 
 module.exports = router;

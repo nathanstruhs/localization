@@ -1,14 +1,20 @@
+* {box-sizing: border-box; margin: 0; padding: 0;}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #221F1B;
     color: white;
     overflow-y: scroll;
     overflow-x: hidden;
-    box-sizing: border-box;
 }
 
 h2 {
-    font-size: 46px;
+    font-size: 48px;
+    margin: 0;
+}
+
+hr {
+    margin-bottom: 25px;
 }
 
 .nav {
@@ -17,6 +23,7 @@ h2 {
     padding: 25px;
     background-color: #221F1B;
     border-bottom: 2px solid white;
+    margin-bottom: 25px;
 }
 
 .logo {
@@ -28,28 +35,54 @@ h2 {
     height: 100%;
 }
 
+.ul-history {
+    margin-left: 50px;
+    width: 50%;
+}
+
 .container {
-    width: 96%;
-    height: 400px;
     margin: 25px;
-    float: left;
 }
 
-.col {
-    width: 48%;
-    height: 100%;
-    float: left;
+.wrapper {
+    border: 0 solid black;
+    padding: 25px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-areas:
+    "welcome-content status";
+}
+
+.wrapper > div {
     border-radius: 10px;
-    padding: 10px;
-    text-align: center;
+    padding: 1em;
+    color: white;
 }
 
-.col > h2 {
-    margin-bottom: 25px;
+.wrapper > .status {
+    background-color: #3F4347;
+    border-radius: 10px;
 }
 
-.col > p {
+.welcome-content {
+  grid-area: welcome-content;
+  text-align: center;
+}
+
+.welcome-title {
+    margin-bottom: 50px;
+}
+
+.byline {
     margin-bottom: 75px;
+}
+
+.status {
+  grid-area: status;
 }
 
 .btn {
@@ -69,25 +102,26 @@ h2 {
     background-color: #1E6BA1;
 }
 
-.status-container {
-    width: 48%;
-    height: 100%;
-    background-color: #3F4347;
-    border-radius: 10px;
-    float: right;
-    border-radius: 10px;
-    padding: 10px;
+footer {
+    text-align: center;
 }
 
-.status-container > hr {
+footer > p {
     margin-bottom: 25px;
 }
 
-.ul-history {
-    margin-left: 50px;
-    width: 50%;
+.separator {
+    position: relative;
+    color: #1E88D1;
+    bottom: 2px;
 }
 
-.hr-history {
-    margin-bottom: 50px;
+@media screen and (max-width: 45em) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        grid-template-areas:
+            "welcome-content"
+            "status";
+    }
 }
