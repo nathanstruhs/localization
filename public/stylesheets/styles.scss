@@ -55,14 +55,12 @@ header {
     padding-top: 1px;
     box-shadow: 20px 20px 20px black;
     h2 {
-      background-color: black;
-      color: white;
+      text-align: center;
       font-size: $font-size-lg;
-      width: 250px;
-      height: 75px;
-      line-height: 117px;
-      text-align: right;
-      padding-right: 10px;
+      width: 300px;
+      display: block;
+      margin: 25px auto;
+      border-bottom: 5px solid black;
     }
     a {
       display: block;
@@ -104,4 +102,22 @@ footer {
     "header"
     "status"
     "footer";
+}
+
+// History screen
+
+.history {
+  margin: 0 50px;
+  color: white;
+  h2 {
+
+  }
+  ul {
+    list-style-type: none;
+    width: 500px;
+  }
+  li {
+    border-bottom: 1px solid white;
+    padding-left: 10px;
+  }
 }

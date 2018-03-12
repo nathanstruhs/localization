@@ -1,17 +1,17 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var scss = require('node-sass-middleware');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const scss = require('node-sass-middleware');
 
 var index = require('./routes/index');
 var api = require('./routes/api');
 
 var app = express();
 
-data_array = []
+history = ['home', 'away', 'home', 'away'];
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
