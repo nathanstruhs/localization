@@ -12,10 +12,12 @@ router.post('/', function(req, res) {
                  + date.getMinutes();
 
   entry['timestamp'] = datetime;
-  data_array.push(entry);
-  for (var i = 0; i < data_array.length; i++) {
+  history.push(entry);
+  status = entry['status'];
+  for (var i = 0; i < history.length; i++) {
     console.log(entry);
   }
+  res.send(history);
 });
 
 module.exports = router;

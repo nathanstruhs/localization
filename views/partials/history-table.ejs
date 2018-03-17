@@ -3,7 +3,7 @@
     <hr>
     <ul>
         <% for (var entry in history) { %>
-            <li><%= history[entry] %></li>
+            <li><%= history[entry].status %> - <%= history[entry].timestamp %></li>
         <% } %>
     </ul>
 </div>

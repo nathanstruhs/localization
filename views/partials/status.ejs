@@ -2,17 +2,23 @@
     <div class="board">
         <h2>STATUS</h2>
 
-        <% if (status == 'home') { %>
-            <p>Your loved one is safe at home <span class="heart">♥</span>︎</p>
-        <% } else if (status == 'away') { %>
-            <p>
-                <span class="warning">Warning!</span>
-                The elder has taken flight!
-                <br>
-                They are <%= rssi %> yards from home.
-            </p>
-        <% } %>
+        <p id="message"><p>
 
         <a class="btn" href="/history">HISTORY ▸</a>
     </div>
 </div>
+
+<script>
+    (function worker() {
+      $.get('/status', function(data) {
+
+        if (data == 'home') {
+            $('#message').html('<p>Your loved one is safe at home <span class="heart">♥</span>︎</p>');
+        } else if (data == 'away') {
+            $('#message').html('<p><span class="warning">Warning! </span>The elder has taken flight!</p>');
+        }
+
+        setTimeout(worker, 1000);
+      });
+    })();
+</script>

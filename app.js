@@ -6,12 +6,14 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const scss = require('node-sass-middleware');
 
-var index = require('./routes/index');
-var api = require('./routes/api');
+var index_route = require('./routes/index');
+var api_route = require('./routes/api');
+var status_route = require('./routes/status');
 
 var app = express();
 
-history = ['home', 'away', 'home', 'away'];
+history = [];
+status = '';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,8 +33,9 @@ app.use(scss({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/api', api);
+app.use('/', index_route);
+app.use('/api', api_route);
+app.use('/status', status_route);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
