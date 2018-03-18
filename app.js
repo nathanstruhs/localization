@@ -13,7 +13,7 @@ var status_route = require('./routes/status');
 var app = express();
 
 history = [];
-status = 'home';
+status = '';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
