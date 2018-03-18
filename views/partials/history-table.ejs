@@ -2,11 +2,11 @@
     <h2>History</h2>
     <hr>
     <ul>
-        <% for (var i = 0; i < history.length; i++) { %>
-            <% if (history[i].status == 'home') { %>
-                <li><% i %>. Returned on <%= history[i].timestamp %></li>
+        <% for (var entry in history) { %>
+            <% if (history[entry].status == 'home') { %>
+                <li>Returned on <%= history[entry].timestamp %></li>
             <% } else { %>
-                <li><% i %>. Departed on <%= history[i].timestamp %></li>
+                <li>Departed on <%= history[entry].timestamp %></li>
             <% } %>
         <% } %>
     </ul>
