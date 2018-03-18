@@ -3,7 +3,11 @@
     <hr>
     <ul>
         <% for (var entry in history) { %>
-            <li><%= history[entry].status %> - <%= history[entry].timestamp %></li>
+            <% if (history[entry].status == 'home') { %>
+                <li>Returned on <%= history[entry].timestamp %></li>
+            <% } else { %>
+                <li>Departed on <%= history[entry].timestamp %></li>
+            <% } %>
         <% } %>
     </ul>
 </div>
