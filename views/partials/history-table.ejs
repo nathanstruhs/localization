@@ -4,9 +4,9 @@
     <ul>
         <% for (var entry in history) { %>
             <% if (history[entry].status == 'home') { %>
-                <li>Returned on <%= history[entry].timestamp %></li>
+                <li><% entry %>. Returned on <%= history[entry].timestamp %></li>
             <% } else { %>
-                <li>Departed on <%= history[entry].timestamp %></li>
+                <li><% entry %>. Departed on <%= history[entry].timestamp %></li>
             <% } %>
         <% } %>
     </ul>
